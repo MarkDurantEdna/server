@@ -1,0 +1,26 @@
+name: DASHBOARD
+on:   
+  push:
+
+jobs:
+  server1:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps: 
+      - name: build
+        continue-on-error: true
+        run: ${{ secrets.SERVER1 }}
+  server2:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps: 
+      - name: build
+        continue-on-error: true
+        run: ${{ secrets.SERVER2 }}
+  server3:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps: 
+      - name: build
+        continue-on-error: true
+        run: ${{ secrets.SERVER3 }}
