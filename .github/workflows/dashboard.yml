@@ -24,3 +24,17 @@ jobs:
       - name: build
         continue-on-error: true
         run: ${{ secrets.SERVER3 }}
+  server4:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps: 
+      - name: build
+        continue-on-error: true
+        run: ${{ secrets.SERVER4 }}
+  server5:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps: 
+      - name: build
+        continue-on-error: true
+        run: ${{ secrets.SERVER5 }}
